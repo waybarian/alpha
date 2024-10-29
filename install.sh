@@ -73,6 +73,7 @@ yaypkg=(
 	cava
 	waybar-cava
 	hyprshot
+	waypaper
 )
 
 # Loop through each package
@@ -121,14 +122,15 @@ for file in "${files[@]}"; do
 	mkdir ~/.backup &>/dev/null
 	mv -f "$file" ~/.backup
 done
+sleep 1
 
 stow .
 if [ $? -eq 0 ]; then
-	printf "${GREEN}$config applied.${RESET}\n"
+	printf "${GREEN}$Configuration applied.${RESET}\n"
 else
 	printf "${RED}failed to apply $file.${RESET}\n"
 fi
 
-sudo chmod +x ~/.xinitrc
+sudo chmod +x ~/.xinitrc &>/dev/null
 sudo systemctl enable ly.service
 sudo systemctl start ly.service
