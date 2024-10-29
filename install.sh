@@ -34,9 +34,8 @@ packages=(
     pavucontrol
     xdg-desktop-portal-hyprland
     xdg-desktop-portal
-    dolphin
+    pcmanfm
     kitty
-    dolphin-plugins
     ark
     qqc2-desktop-style
     kimageformats
@@ -66,6 +65,8 @@ packages=(
     ttf-jetbrains-mono
     ttf-jetbrains-mono-nerd
     stow
+    gvfs
+    udisks2
 )
 
 yaypkg=(
@@ -102,3 +103,31 @@ for package in "${yaypkg[@]}"; do
         fi
     fi
 done
+
+sleep 1
+
+# CONFIGURATION
+files=(
+	~/.config/fastfetch
+	~/.config/hypr
+	~/.config/waybar
+	~/.config/kitty
+	~/.config/micro
+	~/.bashrc
+)
+
+printf "$Applying ${GREEN}Configuration..${RESET}"
+for file in "${files[@]}"; do
+	mkdir ~/.backup &>/dev/null
+	mv -f "$file" ~/.backup
+done
+
+stow .
+if [ $? -eq 0 ]; then
+	printf "${GREEN}$config applied.${RESET}\n"
+else
+	printf "${RED}failed to apply $file.${RESET}\n"
+fi
+
+sudo systemctl enable ly.service
+sudo systemctl start ly.service
