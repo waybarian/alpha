@@ -8,10 +8,8 @@ RESET='\e[0m'
 
 # List of packages
 packages=(
-	fish
 	hyprland
 	ly
-	swaybg
 	swww
     hypridle
     hyprlock
@@ -39,6 +37,7 @@ packages=(
     ark
     qqc2-desktop-style
     kimageformats
+    qt5-imageformats
     qt6-imageformats
     ffmpegthumbs
     kdegraphics-thumbnailers
@@ -46,7 +45,6 @@ packages=(
     kinit
     kio-extras
     kio-admin
-    qt5-imageformats
     firefox
     archlinux-xdg-menu
     python-pydbus
@@ -67,6 +65,7 @@ packages=(
     stow
     gvfs
     udisks2
+    fastfetch
 )
 
 yaypkg=(
@@ -74,6 +73,15 @@ yaypkg=(
 	waybar-cava
 	hyprshot
 	waypaper
+)
+
+files=(
+	~/.config/fastfetch
+	~/.config/hypr
+	~/.config/waybar
+	~/.config/kitty
+	~/.config/micro
+	~/.bashrc
 )
 
 # Loop through each package
@@ -90,6 +98,31 @@ for package in "${packages[@]}"; do
         fi
     fi
 done
+
+printf "$Applying ${GREEN}Configuration..${RESET}"
+for file in "${files[@]}"; do
+	mkdir ~/.backup &>/dev/null
+	mv -f "$file" ~/.backup &>/dev/null
+	rm -rf "$file" &>/dev/null
+done
+sleep 1
+
+stow .
+if [ $? -eq 0 ]; then
+	printf "${GREEN}$Configuration applied.${RESET}\n"
+else
+	printf "${RED}failed to apply $file.${RESET}\n"
+fi
+
+if sudo pacman -Q yay; then
+	printf "${YELLOW}yay installed, skipping...${RESET}\n"
+else
+	git clone https://aur.archlinux.org/yay.git &>/dev/null
+	cd yay
+	makepkg -si &>/dev/null
+	cd ..
+	rm -rf yay
+fi
 
 for package in "${yaypkg[@]}"; do
     if sudo pacman -Q "$package" &>/dev/null; then
@@ -108,28 +141,6 @@ done
 sleep 1
 
 # CONFIGURATION
-files=(
-	~/.config/fastfetch
-	~/.config/hypr
-	~/.config/waybar
-	~/.config/kitty
-	~/.config/micro
-	~/.bashrc
-)
-
-printf "$Applying ${GREEN}Configuration..${RESET}"
-for file in "${files[@]}"; do
-	mkdir ~/.backup &>/dev/null
-	mv -f "$file" ~/.backup
-done
-sleep 1
-
-stow .
-if [ $? -eq 0 ]; then
-	printf "${GREEN}$Configuration applied.${RESET}\n"
-else
-	printf "${RED}failed to apply $file.${RESET}\n"
-fi
 
 sudo chmod +x ~/.xinitrc &>/dev/null
 sudo systemctl enable ly.service
