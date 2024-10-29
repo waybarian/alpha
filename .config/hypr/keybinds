@@ -4,7 +4,7 @@
 $main = SUPER # Windows / Command Key
 
 $terminal = kitty
-$filemanager = dolphin
+$filemanager = pcmanfm
 $menu = rofi -show drun
 $browser = firefox
 $discord = discord

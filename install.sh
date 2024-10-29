@@ -129,5 +129,6 @@ else
 	printf "${RED}failed to apply $file.${RESET}\n"
 fi
 
+sudo chmod +x ~/.xinitrc
 sudo systemctl enable ly.service
 sudo systemctl start ly.service
