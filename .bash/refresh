@@ -1,0 +1,4 @@
+#!/bin/bash
+killall waybar
+killall rofi
+waybar -c ~/.config/waybar/config.jsonc

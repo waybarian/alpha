@@ -1,0 +1,8 @@
+#!/bin/bash
+status=$(ps -ef | grep '[w]aybar -c' | grep menu | awk '{print $2}')
+
+if [ -n "$status" ]; then
+	kill "$status"
+else
+	waybar -c ~/.config/waybar/menu/config.jsonc #-s ~/.config/waybar/menu/style.css
+fi

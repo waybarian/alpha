@@ -1,0 +1,65 @@
+#!/bin/bash
+# Style
+
+general {
+	gaps_in = 			  2
+	gaps_out = 			  3
+
+	border_size = 		  2
+
+	col.active_border =   rgba(b4befeff)
+	col.inactive_border = rgba(1e1e2eaa)
+
+	resize_on_border = 	  false
+
+	allow_tearing = 	  false
+
+	layout =			  dwindle
+}
+
+decoration {
+	rounding = 		   3
+
+	active_opacity =   1.0
+	inactive_opacity = 1.0
+
+	drop_shadow = true
+	shadow_range = 4
+	shadow_render_power = 3
+	col.shadow = rgba(1a1a1aee)
+
+
+	blur {
+		enabled = true
+		size = 4
+		passes = 2
+
+		vibrancy = 0  #0.1696
+	}
+}
+
+animations {
+	enabled = true
+
+	bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+
+	animation = windows, 1, 7, myBezier
+	animation = windowsOut, 1, 7, default, popin 80%
+	animation = border, 1, 10, default
+	animation = borderangle, 1, 8, default
+	animation = fade, 1, 7, default
+	animation = workspaces, 1, 6, default
+}
+
+dwindle {
+	pseudotile = true
+	preserve_split = true
+}
+master {
+	new_status = master
+}
+
+misc {
+	force_default_wallpaper = 0
+	disable_hyprland_logo = true
+}

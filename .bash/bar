@@ -1,0 +1,9 @@
+#!/bin/bash
+
+status=$(ps -ef | grep '[w]aybar -c' | awk '{print $2}')
+
+if [ -n "$status" ]; then
+	killall waybar
+else
+	waybar -c ~/.config/waybar/config.jsonc
+fi

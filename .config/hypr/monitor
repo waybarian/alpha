@@ -1,0 +1,4 @@
+#!/bin/bash
+# Monitor
+
+monitor=,preferred,auto,auto

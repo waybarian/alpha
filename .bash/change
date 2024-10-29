@@ -1,0 +1,12 @@
+#!/bin/bash
+
+status=$(ps -ef | grep '[w]aybar -c' | grep config.jsonc | awk '{print $2}')
+statu2=$(ps -ef | grep '[w]aybar -c' | grep music | awk '{print $2}')
+
+if [ -n "$status" ]; then
+	killall waybar
+	waybar -c ~/.config/waybar/music.jsonc
+elif [ -n "$statu2" ]; then
+	killall waybar
+	waybar -c ~/.config/waybar/config.jsonc
+fi
