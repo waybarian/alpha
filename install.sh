@@ -9,6 +9,7 @@ RESET='\e[0m'
 # List of packages
 packages=(
 	hyprland
+	waybar
 	ly
 	swww
     hypridle
@@ -34,7 +35,8 @@ packages=(
     xdg-desktop-portal
     pcmanfm
     kitty
-    ark
+    starship
+    engrampa
     qqc2-desktop-style
     kimageformats
     qt5-imageformats
@@ -66,13 +68,19 @@ packages=(
     gvfs
     udisks2
     fastfetch
+    kalk
+    nwg-look
+    papirus-icon-theme
 )
 
 yaypkg=(
 	cava
-	waybar-cava
 	hyprshot
 	waypaper
+)
+
+delpkg=(
+	dolphin
 )
 
 files=(
@@ -117,9 +125,9 @@ fi
 if sudo pacman -Q yay; then
 	printf "${YELLOW}yay installed, skipping...${RESET}\n"
 else
-	git clone https://aur.archlinux.org/yay.git &>/dev/null
+	git clone https://aur.archlinux.org/yay.git
 	cd yay
-	makepkg -si &>/dev/null
+	makepkg -si
 	cd ..
 	rm -rf yay
 fi
@@ -137,6 +145,22 @@ for package in "${yaypkg[@]}"; do
         fi
     fi
 done
+
+for package in "${delpkg[@]}"; do
+	if sudo pacman -Q "$package" &>/dev/null; then
+		printf "Removing unused packages, ${YELLOW}$package...${RESET}\n"
+		sudo pacman -R --noconfirm "$package"
+		if [ $ -eq 0 ]; then
+			printf "${GREEN}$package removed.${RESET}\n"
+		else
+			printf "${RED}failed to remove $package.${RESET}\n"
+		fi
+	else
+		printf "${YELLOW}$package is not installed, skipping...${RESET}\n"
+	fi
+done
+
+sudo pacman -Rs --noconfirm $(pacman -Qdtq)
 
 sleep 1
 
