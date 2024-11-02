@@ -4,11 +4,17 @@
 windowrule = float, pavucontrol
 windowrule = float, imv
 windowrule = float, imv-dir
+windowrule = float, waypaper
+windowrule = float, engrampa
+
 #windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-windowrulev2 = suppressevent maximize, class:.*
-windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
+windowrulev2 = opacity 0.90 0.90,class:^(pcmanfm)$
+windowrulev2 = opacity 0.70 0.70,initialTitle:^(pcmanfm)$
+
 
 layerrule = blur, waybar
 layerrule = ignorezero, waybar
 layerrule = blur, rofi
 layerrule = ignorezero, rofi
+layerrule = blur, swaync
+layerrule = ignorezero, swaync

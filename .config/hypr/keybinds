@@ -5,7 +5,7 @@ $main = SUPER # Windows / Command Key
 
 $terminal = kitty
 $filemanager = pcmanfm
-$menu = rofi -show drun
+$menu = ~/.bash/menu
 $browser = firefox
 $discord = discord
 
@@ -13,7 +13,7 @@ $discord = discord
 
 bind = $main, T, exec, $terminal
 bind = $main, Q, killactive,
-bind = $main, Delete, exit,
+bind = $main SHIFT, Delete, exit,
 bind = $main, E, exec, $filemanager
 bind = $main, W, togglefloating,
 bind = $main, A, exec, $menu
@@ -21,7 +21,7 @@ bind = $main, P, pseudo,
 bind = $main, J, togglesplit,
 bind = $main, B, exec, $browser
 bind = $main, D, exec, $discord
-bind = $main, R, exec, ~/.bash/bar
+bind = $main, R, exec, ~/.bash/refresh
 bind = ,INSERT, exec, hyprshot -m output -o ~/Pictures/screenshot
 bind = $main, INSERT, exec, hyprshot -m window -o ~/Pictures/screenshot
 bind = $main, M, exec, ~/mcpe.AppImage

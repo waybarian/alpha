@@ -1,12 +1,14 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FiraSans, FontAwesome;
-    font-size: 16px;
+    font-family: FiraSans;
+    font-size: 14px;
 }
 
+@import "themes/mocha.css";
+
 window#waybar {
-    background-color: rgba(17, 17, 27, 0);
-    color: #ffffff;
+    background-color: alpha(@crust, 0.4);
+    color: @text;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -16,9 +18,9 @@ window#waybar.hidden {
 }
 
 #bar {
-	background-color: rgba(17, 17, 27, 0.5);
-	margin: 3 0 3 0;
-	padding: 3 3;
+	background-color: transparent;
+	margin: 1 0 1 0;
+	padding: 0 3;
 	border: 0px solid rgba(0,0,0,0.1);
 	border-radius: 5;
 }
@@ -27,7 +29,7 @@ window#waybar.hidden {
 #workspaces button {
     padding: 0 4px;
     background-color: transparent;
-    color: #ffffff;
+    color: alpha(@text, 0.2);
     font-weight: bold;
     border-radius: 3;
     transition: all 0.3s linear;
@@ -35,70 +37,71 @@ window#waybar.hidden {
 
 #workspaces button.empty {
 	padding: 0 4px;
-	color: rgba(255, 255, 255, 0.2);
+	color: alpha(@text, 0.2);
+	transition: all 0.3s linear;
 }
 
 #workspaces button.active {
 	padding: 0 4px;
 	transition: all 0.3s linear;
+	color: @text;
 }
 
 #workspaces button.focused {
 	padding: 0 4px;
-    background-color: #64727D;
+    background-color: @red;
 }
 
 #workspaces button.urgent {
 	padding: 0 4px;
-    background-color: #eb4d4b;
+    background-color: @red;
 }
 
 #workspaces button:hover {
-	padding: 0 5px;
-    background: rgba(255, 255, 255, 0.1);
+	padding: 0 4px;
+    background: alpha(@text, 0.1);
     border: 0px solid transparent;
     transition: all 0.3s linear;
 }
 
 #custom-menu {
-	background: rgba(205,214,244,0.1);
+	background: transparent;
 	transition: all 0.3s linear;
-	border-radius: 5;
-	padding: 0 13 0 7;
-	margin: 0 3 0 0;
-	font-size: 16;
-	color: #cdd6f4;
+	border-radius: 3;
+	padding: 0 11 0 8;
+	margin: 0 2 0 0;
+	font-size: 14;
+	color: @text;
 }
 #custom-menu:hover {
-	color: rgba(205, 214, 244, 0.4);
+	color: alpha(@text, 0.4);
 	transition: all 0.3s linear;
 }
 
 #custom-change {
 	transition: all 0.3s linear;
 	border-radius: 5;
-	padding: 0 10 0 5;
+	padding: 0 12 0 7;
 	margin: 0 3 0 0;
 	font-size: 10;
-	color: rgba(255, 255, 255, 0.2);
+	color: alpha(@text, 0.2);
 }
 
 #custom-change:hover {
-	color: rgba(205, 214, 244, 1);
+	color: @text;
 	transition: all 0.3s linear;
 }
 
 #player {
-	background: rgba(255,255,255,0.05);
-	margin: 0 3 0 0;
-	padding: 2 0;
+	background: transparent;
+	margin: 0 0 0 0;
+	padding: 0 10;
 	border-radius: 3;
 }
 
 #custom-playerctl {
 	background: transparent;
-	padding-left: 5px;
-  padding-right: 1px;
+	padding: 0px;
 	border-radius: 16px;
   /*border-left: solid 1px #282738;*/
   /*border-right: solid 1px #282738;*/
@@ -111,10 +114,9 @@ window#waybar.hidden {
 }
 
 #custom-playerlabel {
-	font-size: 16;
+	font-size: 12;
     background: transparent;
-    padding-left: 5px;
-    padding-right: 15px;
+    padding: 0 5;
     border-radius: 16px;
     /*border-left: solid 1px #282738;*/
     /*border-right: solid 1px #282738;*/
@@ -126,47 +128,40 @@ window#waybar.hidden {
 
 #clock {
     background-color: transparent;
+    border-radius: 3;
     font-size: 12;
     font-weight: bold;
-    color: rgba(255,255,255,0.3);
-    padding: 0 10;
-    margin: 13 0 0 0;
+    color: alpha(@text, 1);
+    padding: 0 2;
+    margin: 5 15 5 0;
     transition: all 0.3s linear;
-}
-#clock:hover {
-	color: rgba(255,255,255,1);
-	transition: all 0.3s linear;
 }
 
 #battery {
     background-color: transparent;
-    color: rgba(255,255,255,0.3);
-    font-size: 12;
+    border-radius: 3;
+    color: alpha(@text, 1);
+    font-size: 13;
     font-weight: bold;
-    margin: 10 0 0 0;
-    padding: 0 10 0 10;
-}
-#battery:hover {
-	color: rgba(255,255,255,1);
-	transition: all 0.3s linear;
+    margin: 3 0 3 0;
+    padding: 0 5;
 }
 
 #battery.charging, #battery.plugged {
-    color: #26A65B;
-    background-color: transparent;
+    color: @green;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: @text;
+        color: @crust;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #f53c3c;
+    background-color: transparent;
+    color: @red;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -225,10 +220,11 @@ label:focus {
 
 #tray {
     background-color: transparent;
+    border-radius: 3;
     font-weight: bold;
-    color: rgba(255,255,255,0.3);
-    padding: 0 2;
-    margin: 13 0 0 0;
+    color: @text;
+    padding: 0 5;
+    margin: 5 0 5 0;
     transition: all 0.3s linear;
 }
 
@@ -241,9 +237,3 @@ label:focus {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }
-
-#tray:hover {
-	color: rgba(255,255,255,1);
-	transition: all 0.3s linear;
-}
-

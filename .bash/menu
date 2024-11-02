@@ -4,11 +4,11 @@ statu2=$(ps -ef | grep '[r]ofi -show' | awk '{print $2}')
 run=$(cat ~/.bash/tjawa)
 
 menu() {
-	if [ -n "$status" ]; then
-		kill "$status" | kill "$statu2"
+	if [ -n "$statu2" ]; then
+		kill "$statu2"
 	else
 		# waybar -c ~/.config/waybar/menu/config.jsonc | rofi -show drun #-s ~/.config/waybar/menu/style.css	
-		rofi -show drun	| waybar -c ~/.config/waybar/menu/config.jsonc
+		rofi -show drun
 	fi
 }
 

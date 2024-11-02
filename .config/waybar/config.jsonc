@@ -5,25 +5,26 @@
     // "width": 1280, // Waybar width
     "exclusive": true,
     "spacing": 0, // Gaps between modules (4px)
-	"margin-top": -3,
+	"margin-top": 0,
     
     // Choose the order of the modules
     "modules-left": [
-    	"battery"
+    	"group/player"
     ],
     "modules-center": [
     	"group/bar"
     ],
     "modules-right": [
     	"tray",
+    	"battery",
     	"clock"
     ],
     // Modules configuration
 	"group/player": {
 		"orientation": "horizontal",
 		"modules": [
-			"custom/playerctl",
-			"custom/playerlabel"
+			"custom/playerlabel",
+			"custom/playerctl"
 		]
 	},
 
@@ -42,7 +43,7 @@
         "warp-on-scroll": false,
         "format": "{icon}",
         "persistent-workspaces": {
-            "*": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            "*": [1, 2, 3, 4, 5, 6,]
         },
         "format-icons": {
         	//"1": "W",
@@ -57,12 +58,13 @@
             "urgent": "",
             "focused": "",
             "active": "",
-            "default": ""
+            "default": "",
+            "empty": ""
         }
     },
 
     "custom/menu": {
-    	"format": "",
+    	"format": "󰣇",
     	"tooltip": false,
     	"on-click": "~/.bash/menu"
     },
@@ -83,16 +85,16 @@
       "on-scroll-down": "playerctl previous",
       "on-scroll-up": "playerctl next",
       "format-icons": {
-        "Playing": "<span foreground='#cdd6f4'>  </span>",
-        "Paused": "<span foreground='#cdd6f4'>  </span>"
+        "Playing": "<span foreground='#cdd6f4'>  </span>",
+        "Paused": "<span foreground='#cdd6f4'>  </span>"
       },
     },
 
     "custom/playerlabel": {
-      "format": "<span>{}</span>",
+      "format": "   <span>{}</span>",
       "tooltip": true,
       "return-type": "json",
-      "max-length": 48,
+      "max-length": 24,
       "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
       "on-click": "playerctl play-pause",
       "on-scroll-down": "playerctl previous",
@@ -187,10 +189,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}%",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format": "{icon}",
+        "format-full": "{icon}",
+        "format-charging": "{capacity}% {icon}",
+        "format-plugged": "{capacity}%",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",

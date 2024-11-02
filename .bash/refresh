@@ -1,4 +1,11 @@
 #!/bin/bash
 killall waybar
+killall swaync
 killall rofi
+
+if [ $(($RANDOM % 2)) -eq 0 ]; then
+    notify-send "Test Long" "This is the bottom side of the notifications, lorem ipsum dolor si amet. lose will come to person who doesn't even start. don't ever stop before start1"
+else
+    notify-send "Test Short" "Bottom Lines of the notif"
+fi
 waybar -c ~/.config/waybar/config.jsonc

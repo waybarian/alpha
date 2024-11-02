@@ -1,6 +1,7 @@
 #!/bin/bash
 # EXECUTE
 
+exec-once = hyprctl setcursor Colloid-Pastel-Dark 22
 exec-once = nm-applet & swaync
 exec-once = waybar -c ~/.config/waybar/config.jsonc
 exec-once = waypaper --restore
