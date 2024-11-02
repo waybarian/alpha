@@ -127,7 +127,7 @@ window#waybar.hidden {
 }
 
 #custom-notif {
-	font-size: 20;
+	font-size: 13;
 	margin: 0 15 0 5;
 	transition: all 0.3s linear;
 }

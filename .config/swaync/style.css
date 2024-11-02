@@ -1,6 +1,7 @@
 @define-color cc-bg rgba(30, 30, 46, 0.8);
 @define-color noti-border-color rgba(180, 190, 254, 0.15);
 @define-color noti-bg rgba(30, 30, 46, 0.4);
+@define-color noti-bg-critical rgba(255, 105, 97, 0.4);
 @define-color noti-bg-opaque rgb(48, 48, 48);
 @define-color noti-bg-darker rgb(48, 48, 48);
 @define-color noti-bg-hover rgba(24, 24, 37, 0.4);
@@ -64,6 +65,7 @@
 
 .notification-row .notification-background .notification.critical {
   /* Critical Priority Notification */
+  background: @noti-bg-critical;
 }
 
 .notification-row .notification-background .notification .notification-action, .notification-row .notification-background .notification .notification-default-action {
