@@ -17,7 +17,8 @@
     "modules-right": [
     	"tray",
     	"battery",
-    	"clock"
+    	"clock",
+    	"custom/notif"
     ],
     // Modules configuration
 	"group/player": {
@@ -73,6 +74,12 @@
     	"format": "",
     	"tooltip": false,
     	"on-click": "~/.bash/change"
+    },
+
+    "custom/notif": {
+    	"format": "󰎟",
+    	"tooltip-format": "Notification Center",
+    	"on-click": "swaync-client -t"
     },
 
     "custom/playerctl": {

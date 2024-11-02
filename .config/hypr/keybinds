@@ -24,7 +24,7 @@ bind = $main, D, exec, $discord
 bind = $main, R, exec, ~/.bash/refresh
 bind = ,INSERT, exec, hyprshot -m output -o ~/Pictures/screenshot
 bind = $main, INSERT, exec, hyprshot -m window -o ~/Pictures/screenshot
-bind = $main, M, exec, ~/mcpe.AppImage
+bind = $main, N, exec, swaync-client -t
 bind = $main, Space, exec, ~/.bash/bar
 
 #########################

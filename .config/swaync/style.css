@@ -1,10 +1,10 @@
-@define-color cc-bg rgba(46, 46, 46, 0.7);
+@define-color cc-bg rgba(30, 30, 46, 0.8);
 @define-color noti-border-color rgba(180, 190, 254, 0.15);
 @define-color noti-bg rgba(30, 30, 46, 0.4);
 @define-color noti-bg-opaque rgb(48, 48, 48);
-@define-color noti-bg-darker rgb(38, 38, 38);
+@define-color noti-bg-darker rgb(48, 48, 48);
 @define-color noti-bg-hover rgba(24, 24, 37, 0.4);
-@define-color noti-bg-hover-opaque rgb(56, 56, 56);
+@define-color noti-bg-hover-opaque rgb(24, 24, 37);
 @define-color noti-bg-focus rgba(68, 68, 68, 0.6);
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
@@ -262,7 +262,7 @@
   /* The Control Center which contains the old notifications + widgets */
   background: @cc-bg;
   color: @text-color;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .control-center .control-center-list-placeholder {
@@ -317,7 +317,7 @@
   background: @noti-bg;
   border: 1px solid @noti-border-color;
   box-shadow: none;
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .widget-title > button:hover {
@@ -333,7 +333,7 @@
 
 .widget-dnd > switch {
   font-size: initial;
-  border-radius: 12px;
+  border-radius: 6px;
   background: @noti-bg;
   border: 1px solid @noti-border-color;
   box-shadow: none;
@@ -345,7 +345,7 @@
 
 .widget-dnd > switch slider {
   background: @noti-bg-hover;
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 /* Label widget */
