@@ -1,0 +1,8 @@
+#!/bin/bash
+status=$(ps -ef | grep '[w]aybar -c' | grep notif | awk '{print $2}')
+
+if [ -n "$status" ]; then
+	kill "$status" | swaync-client -t
+else
+	waybar -c ~/.config/waybar/notif/config.jsonc -s ~/.config/waybar/notif/style.css | swaync-client -t
+fi

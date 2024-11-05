@@ -1,0 +1,43 @@
+{
+	"layer": "top",
+	"position": "bottom",
+	"exclusive": false,
+	"margin-bottom": 10,
+	"width": 200,
+
+	"modules-center": [
+		"group/window"
+	],
+
+	"group/window": {
+		"orientation": "vertical",
+		"modules": [
+			"group/top",
+			"group/bot"
+		]
+	},
+
+	"group/top": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/texttop"
+		]
+	},
+
+	"group/bot": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/textbot"
+		]
+	},
+
+	"custom/texttop": {
+		"format": "Player",
+		"tooltip": false
+	},
+
+	"custom/textbot": {
+		"format": "Notifications",
+		"tooltip": false
+	}
+}

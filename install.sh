@@ -16,7 +16,7 @@ packages=(
     hyprlock
     wlroots
     polkit-kde-agent
-    swaync
+    dunst
     grim
     slurp
     wl-clipboard
@@ -71,6 +71,8 @@ packages=(
     kalk
     nwg-look
     papirus-icon-theme
+    pamixer
+    acpi
 )
 
 yaypkg=(

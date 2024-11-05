@@ -1,0 +1,41 @@
+* {
+	font-family: FiraSans;
+	font-size: 14px;
+}
+
+@import "themes/mocha.css";
+
+window#waybar {
+	background: transparent;
+	color: @text;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+#window {
+	background: transparent;
+	color: @text;
+	margin-left: 1100;
+}
+
+#top {
+	background: alpha(@crust, 0.4);
+	border-radius: 3px;
+	padding: 0 0 100 0;
+	margin: 0 0 5 0;
+}
+
+#bot {
+	background: alpha(@crust, 0.4);
+	border-radius: 3px;
+	padding: 0 0 300 0;
+}
+
+#custom-texttop {
+	padding: 10 102;
+	background: alpha(@base, 0.5);
+}
+#custom-textbot {
+	padding: 10 80;
+	background: alpha(@base, 0.5);
+}

@@ -2,11 +2,12 @@
 # EXECUTE
 
 exec-once = hyprctl setcursor Colloid-Pastel-Dark 22
-exec-once = nm-applet & swaync
+exec-once = nm-applet & dunst
 exec-once = waybar -c ~/.config/waybar/config.jsonc
 exec-once = waypaper --restore
 exec-once = hypridle
 exec-once = sudo -S -E exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & # Graphical authentication agent
 exec = XDG_MENU_PREFIX=arch- kbuildsycoca6
 exec-once = appflowy
+exec = ~/.bash/battery
 

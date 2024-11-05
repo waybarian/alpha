@@ -212,6 +212,7 @@
             "critical": 15
         },
         "format": "{icon}",
+        "tooltip-format": "{capacity}%",
         "format-full": "{icon}",
         "format-charging": "{capacity}% {icon}",
         "format-plugged": "{capacity}%",
