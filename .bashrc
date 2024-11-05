@@ -16,3 +16,5 @@ gbr=$(git branch --show-current 2>/dev/null)
 alias gbr='git branch --show-current 2>/dev/null'
 PS1='\n\w\[\e[38;5;39;1m\]$gbr\n\[\e[0;92;5m\]>\[\e[0m\] '
 
+
+export PATH=$PATH:/home/ahmadinne/.spicetify

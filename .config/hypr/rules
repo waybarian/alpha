@@ -16,5 +16,5 @@ layerrule = blur, waybar
 layerrule = ignorezero, waybar
 layerrule = blur, rofi
 layerrule = ignorezero, rofi
-layerrule = blur, swaync
-layerrule = ignorezero, swaync
+layerrule = blur, dunst
+layerrule = ignorezero, dunst

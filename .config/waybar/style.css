@@ -1,13 +1,13 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FiraSans;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 @import "themes/mocha.css";
 
 window#waybar {
-    background-color: alpha(@crust, 0.4);
+    background-color: alpha(@crust, 0.8);
     color: @text;
     transition-property: background-color;
     transition-duration: .5s;
@@ -18,20 +18,34 @@ window#waybar.hidden {
 }
 
 #bar {
-	background-color: transparent;
-	margin: 1 0 1 0;
+	background-color: alpha(@text, 0.1);
+	margin: 4 0;
 	padding: 0 3;
 	border: 0px solid rgba(0,0,0,0.1);
-	border-radius: 5;
+	border-radius: 3;
 }
 
+#kanan {
+	background: alpha(@text, 0.1);
+	margin: 4 10 4 7;
+	padding: 0 3;
+	border-radius: 3;
+}
 
+#workspaces {
+	margin-left: 10px;
+	background: alpha(@text, 0.1);
+	margin: 4 0 4 10;
+	border: 0px solid alpha(@text, 0.1);
+	border-radius: 3;
+}
 #workspaces button {
     padding: 0 4px;
+    margin: 0;
     background-color: transparent;
     color: alpha(@text, 0.2);
     font-weight: bold;
-    border-radius: 3;
+    border-radius: 1;
     transition: all 0.3s linear;
 }
 
@@ -45,6 +59,7 @@ window#waybar.hidden {
 	padding: 0 4px;
 	transition: all 0.3s linear;
 	color: @text;
+	background: alpha(@text, 0.1);
 }
 
 #workspaces button.focused {
@@ -68,22 +83,22 @@ window#waybar.hidden {
 	background: transparent;
 	transition: all 0.3s linear;
 	border-radius: 3;
-	padding: 0 11 0 8;
-	margin: 0 2 0 0;
+	padding: 0 10;
+	margin: 0;
 	font-size: 14;
-	color: @text;
+	color: alpha(@text, 0.2);
 }
 #custom-menu:hover {
-	color: alpha(@text, 0.4);
+	color: @text;
 	transition: all 0.3s linear;
 }
 
 #custom-change {
 	transition: all 0.3s linear;
-	border-radius: 5;
-	padding: 0 12 0 7;
-	margin: 0 3 0 0;
-	font-size: 10;
+	border-radius: 3;
+	padding: 0 14 0 10;
+	margin: 0;
+	font-size: 11;
 	color: alpha(@text, 0.2);
 }
 
@@ -93,9 +108,9 @@ window#waybar.hidden {
 }
 
 #player {
-	background: transparent;
-	margin: 0 0 0 0;
-	padding: 0 10;
+	background: alpha(@text, 0.1);
+	margin: 4 7;
+	padding: 0 7;
 	border-radius: 3;
 }
 
@@ -155,7 +170,7 @@ window#waybar.hidden {
     font-size: 13;
     font-weight: bold;
     margin: 3 0 3 0;
-    padding: 0 5;
+    padding: 0 7;
 }
 
 #battery.charging, #battery.plugged {
@@ -198,7 +213,8 @@ label:focus {
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: transparent;
+    padding: 0 4;
 }
 
 #network {
@@ -211,8 +227,10 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: transparent;
+    padding: 0 7;
+    font-size: 11;
+    margin: 0 3 0 0;
 }
 
 #pulseaudio.muted {
@@ -230,12 +248,12 @@ label:focus {
 }
 
 #tray {
-    background-color: transparent;
+    background-color: alpha(@text, 0.1);
     border-radius: 3;
     font-weight: bold;
     color: @text;
-    padding: 0 5;
-    margin: 5 0 5 0;
+    padding: 0 7;
+    margin: 4 0;
     transition: all 0.3s linear;
 }
 

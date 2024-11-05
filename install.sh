@@ -112,8 +112,8 @@ done
 printf "$Applying ${GREEN}Configuration..${RESET}"
 for file in "${files[@]}"; do
 	mkdir ~/.backup &>/dev/null
-	mv -f "$file" ~/.backup &>/dev/null
-	rm -rf "$file" &>/dev/null
+	sudo mv -f "$file" ~/.backup &>/dev/null
+	sudo rm -rf "$file" &>/dev/null
 done
 sleep 1
 
