@@ -3,12 +3,13 @@
 	<h3></h3>
 </div>
 
+<br>
+
 <div align="left">
 	<h2> Installation</h2>
 	<h3></h3>
 </div>
-**Copy & paste these commands into your terminal**
-<h3></h3>
+<blockquote><b> Copy & paste these commands into your terminal </b></blockquote>
 
 <details>
 	<summary> Clone the files from github </summary>
