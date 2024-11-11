@@ -7,12 +7,15 @@ configuration{
     window-format: "{w} · {c} · {t}";
     location: 6;
     disable-history: false;
-    hide-scrollbar: true;
+    hide-scrollbar: false;
     display-drun: " ";
     display-run: "   Run ";
     display-window: " 󰕰  Window";
     display-Network: " 󰤨  Network";
-    sidebar-mode: true;
+    sidebar-mode: false;
+    hover-select: false;
+    click-to-exit: true;
+    kb-cancel: "Escape,Control+g,Control+bracketleft,MouseSecondary";
 }
 
 @import ".config/rofi/themes/mocha"
@@ -73,7 +76,7 @@ listview {
     border: 0px 0px 0px;
     padding: 5px 0px;
     margin: 10 15 50 15px;
-    columns: 6;
+    columns: 1;
     lines: 5;
     cycle: true;
     dynamic: true;
@@ -98,7 +101,7 @@ element {
     spacing: 2px;
     background-color: transparent;
     text-color: @fg-col  ;
-    orientation: vertical;
+    orientation: horizontal;
 }
 
 element-text {

@@ -16,6 +16,7 @@ bind = $main, Q, killactive,
 bind = $main SHIFT, Delete, exit,
 bind = $main, E, exec, $filemanager
 bind = $main, W, togglefloating,
+bind = $main SHIFT, W, exec, waypaper
 bind = $main, A, exec, $menu
 bind = $main, P, pseudo,
 bind = $main, J, togglesplit,
@@ -71,8 +72,8 @@ bindm = $main, mouse:273, resizewindow
 
 ############################
 
-bindel = ,XF86AudioRaiseVolume, exec, ~/.bash/chvol up
-bindel = ,XF86AudioLowerVolume, exec, ~/.bash/chvol down
+bindel = ,F6, exec, ~/.bash/chvol up
+bindel = ,F5, exec, ~/.bash/chvol down
 bindel = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindel = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 bindel = ,F8, exec, brightnessctl s 5%+

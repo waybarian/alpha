@@ -1,6 +1,6 @@
 #!/bin/bash
 killall waybar
-killall swaync
+killall dunst
 killall rofi
 
 if [ $(($RANDOM % 2)) -eq 0 ]; then
