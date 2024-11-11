@@ -40,6 +40,7 @@ files() {
 	stow .
 	if [ $? -eq 0 ]; then
 		printf "${GREEN}dotfiles applied.${RESET}\n"
+		nwg-look -a &>/dev/null
 		echo ""
 		echo ""
 		echo ""

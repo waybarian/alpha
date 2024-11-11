@@ -50,11 +50,7 @@ packages=(
     noto-fonts-cjk
     ttf-fira-sans
     ttf-fira-code
-    ttf-fira-mono
-    otf-firamono-nerd
     ttf-firacode-nerd
-    ttf-jetbrains-mono
-    ttf-jetbrains-mono-nerd
     stow
     gvfs
     udisks2

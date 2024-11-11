@@ -7,7 +7,7 @@
 	
 ![](https://img.shields.io/github/last-commit/waybarian/arch-hyprland?&style=for-the-badge&color=FFB1C8&logoColor=D9E0EE&labelColor=292324)
 ![](https://img.shields.io/github/stars/waybarian/arch-hyprland?style=for-the-badge&logo=andela&color=FFB686&logoColor=D9E0EE&labelColor=292324)
-[![](https://img.shields.io/github/repo-size/waybarian/arch-hyprland?color=CAC992&label=SIZE&logo=googledrive&style=for-the-badge&logoColor=D9E0EE&labelColor=292324)](https://github.com/end-4/hyprland)
+[![](https://img.shields.io/github/repo-size/waybarian/arch-hyprland?color=CAC992&label=SIZE&logo=googledrive&style=for-the-badge&logoColor=D9E0EE&labelColor=292324)](https://github.com/waybarian/arch-hyprland)
 [![](https://img.shields.io/github/sponsors/waybarian?color=CAC992&label=DONATE&logo=ko-fi&style=for-the-badge&logoColor=D9E0EE&labelColor=292324)](https://ko-fi.com/veillain)
 </a>
 	
