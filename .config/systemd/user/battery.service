@@ -1,9 +1,0 @@
-[Unit]
-Description=Desktop alert warning of low remaining battery
-
-[Service]
-Type=oneshot
-ExecStart=%h/.bash/battery
-
-[Install]
-WantedBy=graphical.target
