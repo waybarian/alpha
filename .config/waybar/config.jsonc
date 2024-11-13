@@ -13,7 +13,9 @@
     	"group/player"
     ],
     "modules-center": [
-    	"group/bar"
+    	"custom/wl",
+    	"group/bar",
+    	"custom/wr"
     ],
     "modules-right": [
     	"tray",

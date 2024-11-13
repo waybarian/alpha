@@ -14,7 +14,7 @@ PS1='\n\w\[\e[38;5;39;1m\]$gbr\n\[\e[0;92;5m\]>\[\e[0m\] '
 export PATH=$PATH:/home/ahmadinne/.spicetify
 
 #aliases
-alias ff='fastfetch --logo none'
+alias ff='clear; fastfetch --logo none'
 alias m='micro'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
