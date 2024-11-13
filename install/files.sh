@@ -38,7 +38,9 @@ files() {
 	done
 	sleep 1
 	
-	rm -rf ~/.config/hypr | stow .
+	stow .
+	conf=$(cat install/hyprconf)
+	echo "$conf" > .config/hypr/hyprland.conf
 	if [ $? -eq 0 ]; then
 		printf "${GREEN}dotfiles applied.${RESET}\n"
 		nwg-look -a &>/dev/null
