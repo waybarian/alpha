@@ -4,7 +4,7 @@
 $main = SUPER # Windows / Command Key
 
 $terminal = kitty
-$filemanager = pcmanfm
+$filemanager = nemo
 $menu = ~/.bash/menu
 $browser = /usr/bin/google-chrome-stable %U
 $discord = discord
