@@ -24,7 +24,7 @@ packages=(
     pavucontrol
     xdg-desktop-portal-hyprland
     xdg-desktop-portal
-    pcmanfm
+    nemo
     kitty
     starship
     engrampa
@@ -38,7 +38,6 @@ packages=(
     kinit
     kio-extras
     kio-admin
-    firefox
     archlinux-xdg-menu
     python-pydbus
     python-psutil

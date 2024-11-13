@@ -1,4 +1,5 @@
 yaypkg=(
+	google-chrome
 	cava
 	hyprshot
 	waypaper
