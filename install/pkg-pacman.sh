@@ -62,6 +62,8 @@ packages=(
     fzf
     bat
     eza
+    thefuck
+    zoxide
 )
 
 pkg-pacman() {
