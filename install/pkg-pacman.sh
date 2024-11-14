@@ -59,6 +59,7 @@ packages=(
     papirus-icon-theme
     pamixer
     acpi
+    fzf
 )
 
 pkg-pacman() {

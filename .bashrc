@@ -4,6 +4,7 @@
 fastfetch --logo none
 export "MICRO_TRUECOLOR=1"
 eval "$(starship init bash)"
+eval "$(fzf --bash)"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
