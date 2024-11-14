@@ -60,6 +60,8 @@ packages=(
     pamixer
     acpi
     fzf
+    bat
+    eza
 )
 
 pkg-pacman() {
