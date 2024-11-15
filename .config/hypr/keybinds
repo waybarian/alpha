@@ -23,8 +23,8 @@ bind = $main, J, togglesplit,
 bind = $main, B, exec, $browser
 bind = $main, D, exec, $discord
 bind = $main, R, exec, ~/.bash/refresh
-bind = ,INSERT, exec, hyprshot -m output -o ~/Pictures/screenshot
-bind = $main, INSERT, exec, hyprshot -m window -o ~/Pictures/screenshot
+bind = $main,INSERT, exec, hyprshot -m output -o ~/Pictures/screenshot
+bind = $main SHIFT, INSERT, exec, hyprshot -m window -o ~/Pictures/screenshot
 bind = $main, N, exec, swaync-client -t
 bind = $main, Space, exec, ~/.bash/bar
 
@@ -72,12 +72,12 @@ bindm = $main, mouse:273, resizewindow
 
 ############################
 
-bindel = ,F6, exec, ~/.bash/chvol up
-bindel = ,F5, exec, ~/.bash/chvol down
+bindel = $main TAB, up, exec, ~/.bash/chvol up
+bindel = $main TAB, down, exec, ~/.bash/chvol down
 bindel = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindel = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-bindel = ,F8, exec, brightnessctl s 5%+
-bindel = ,F7, exec, brightnessctl s 5%- 
+bindel = $main TAB, right, exec, brightnessctl s 5%+
+bindel = $main TAB, left, exec, brightnessctl s 5%- 
 
 bindl = ,F12, exec, playerctl next
 ##bindl = ,F11, exec, playerctl play-pause
