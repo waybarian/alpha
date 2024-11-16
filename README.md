@@ -56,7 +56,7 @@
 
 	SUPER + (1 - 9) 			= Changing Workspaces
 	SUPER + SHIFT + ( 1 - 9 ) 	= Move Windows into Workspace
-	SUPER + S 				  	= Special Workspaces
+	SUPER + S 					= Special Workspaces
 	SUPER + SHIFT + S 			= Move Windows into Special Workspace
 
 	SUPER + Q 					= Close Windows
