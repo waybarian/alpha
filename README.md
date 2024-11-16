@@ -44,3 +44,27 @@
 	
 	./install.sh
 </details>
+
+<br>
+
+<div>
+	<h2> Keybinds / Shortcut </h2>
+	<h3></h3>
+</div>
+<blockquote>
+	SUPER = Window / Cmd Key
+
+	SUPER + (1 - 9) 			= Changing Workspaces
+	SUPER + SHIFT + ( 1 - 9 ) 	= Move Windows into Workspace
+	SUPER + S 				  	= Special Workspaces
+	SUPER + SHIFT + S 			= Move Windows into Special Workspace
+
+	SUPER + Q 					= Close Windows
+
+	SUPER + T 					= Launch Terminal
+	SUPER + E 					= Launch File Manager
+	SUPER + B 					= Launch Browser
+	SUPER + A 					= Launch App Launcher
+	SUPER + W 					= Maximize / Minimize Windows
+	SUPER + F 					= Fullscreen Windows
+</blockquote>
