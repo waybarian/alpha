@@ -24,7 +24,7 @@ packages=(
     pavucontrol
     xdg-desktop-portal-hyprland
     xdg-desktop-portal
-    nemo
+    pcmanfm
     kitty
     starship
     engrampa
