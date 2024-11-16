@@ -56,6 +56,7 @@ packages=(
     fastfetch
     kalk
     nwg-look
+    network-manager-applet
     papirus-icon-theme
     pamixer
     acpi

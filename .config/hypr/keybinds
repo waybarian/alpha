@@ -17,6 +17,7 @@ bind = $main SHIFT, Delete, exit,
 bind = $main, E, exec, $filemanager
 bind = $main, W, togglefloating,
 bind = $main SHIFT, W, exec, waypaper
+bind = $main, F, fullscreen
 bind = $main, A, exec, $menu
 bind = $main, P, pseudo,
 bind = $main, J, togglesplit,
